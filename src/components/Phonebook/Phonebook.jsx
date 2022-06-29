@@ -1,10 +1,10 @@
 import React from "react";
-// import { nanoid } from "nanoid";
 
 import ContactForm from "../ContactForm/ContactForm";
 import Filter from "../Filter/Filter";
 import ContactList from "./ContactList";
 import "../../styles/index.css"
+import { Title } from '../Phonebook/Phonebook.styled';
 
 class Phonebook extends React.Component {
   state = {
@@ -47,13 +47,13 @@ class Phonebook extends React.Component {
     const { filter, contacts } = this.state;
 
     return (
-      <div>
-        <h1 className="phonebook-title">Phonebook</h1>
+      <>
+        <Title>Phonebook</Title>
         <ContactForm allContacts={contacts} onSubmit={handleCreate} />
-        <h2 className="contacts-title">Contacts</h2>
+        <Title>Contacts</Title>
         <Filter value={filter} onChange={handleFilter} />
         <ContactList lists={getFilter()} onClick={handleDelete} />
-      </div>
+      </>
     );
   }
 }

@@ -1,6 +1,6 @@
-@import-normalize; /* bring in normalize.css styles */
+/* /* @import-normalize; bring in normalize.css styles
 
-
+/*  */
 
 body {
   margin: 0;
@@ -9,83 +9,4 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(196, 255, 197);
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-* {
-  margin: 0;
-  padding: 0;
-  text-decoration: none;
-  list-style: none;
-}
-.contacts-items{
-  margin-top: 50px;
-  margin-left: 50px;
-  font-size: 20px;
-  color: rgb(79, 79, 196);
-}
-.btn{
-  padding: 10px;
-  cursor: pointer;
-  background-color: rgba(224, 72, 123, 0.859);
-  border-radius: 5px;
-  border: 2px solid  rgb(96, 7, 63);
-  margin-left: 20px;
-  margin-bottom: 10px;
-  font-size: 15px;
-}
-.btn-contact{
-    padding: 10px;
-    cursor: pointer;
-    background-color: rgba(85, 224, 72, 0.859);
-    border-radius: 5px;
-    border: 3px solid rgb(14, 108, 8);
-    margin-left: 70px;
-    font-size: 15px;
-
-}
-.phonebook-title{
-  color:rgba(187, 21, 131, 0.859);
-  margin-left: 50px;
-  font-size: 50px;
-  font-family:'Helvetica Neue';
-  margin-bottom: 20px;
-  margin-top: 20px;
-  text-shadow: 4px 4px 4px rgba(232, 77, 129, 0.859);
-  
-}
-.contacts-title{
-  color: rgba(187, 21, 131, 0.859);
-    margin-left: 50px;
-    font-size: 50px;
-    font-family: 'Helvetica Neue';
-    margin-bottom: 20px;
-    margin-top: 20px;
-    text-shadow:4px 4px 4px rgba(232, 77, 129, 0.859);
-}
-.filter-title{
-  margin-left: 70px;
-  font-size: 20px;
-  color: rgb(240, 125, 18);
-  margin-bottom: 7px;
-}
-.filter-input{
-  margin-left: 70px;
-  padding: 10px;
-  border-radius: 3px;
-}
-.phone-label{
-  margin-left: 70px;
-  color:rgb(240, 125, 18);
-  font-size: 18px;
-}
-.phone-input{
-  margin-bottom: 20px;
-margin-left: 10px;
-padding: 5px;
-border-radius: 3px;
 }

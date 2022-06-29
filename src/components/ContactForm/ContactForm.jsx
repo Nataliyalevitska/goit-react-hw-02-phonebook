@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { nanoid } from "nanoid";
-import "../../styles/index.css"
+import { PhoneLabel,PhoneInput,ButtonContact,PhoneForm } from './ContactForm.styled';
 
 class ContactForm extends Component {
   state = {
@@ -36,38 +36,37 @@ class ContactForm extends Component {
       return !value;
     });
     return (
-      <form onSubmit={handleSubmit}>
-        <label className="phone-label">
+      <PhoneForm onSubmit={handleSubmit}>
+        <PhoneLabel>
           Name
-          <input className="phone-input"
+          <PhoneInput 
             type="text"
             name="name"
             value={name}
+             placeholder="*Enter name"
             onChange={handleChange}
             pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
             title=" Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan "
             required
           />
-        </label>
-        <br />
-        <label className="phone-label">
+        </PhoneLabel>
+        <PhoneLabel>
           Number
-          <input className="phone-input"
+          <PhoneInput 
             type="tel"
             name="number"
-            // id={nanoid(3)}
             value={number}
+             placeholder="*Enter phone"
             onChange={handleChange}
             pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"
             title=" Phone number must be digits and can contain spaces, dashes, parentheses and can start with + "
             required
           />
-        </label>
-        <br />
-        <button className= "btn-contact" type="submit" disabled={isBtnDis}>
+        </PhoneLabel>
+        <ButtonContact  type="submit" disabled={isBtnDis}>
           Add contact
-        </button>
-      </form>
+        </ButtonContact>
+      </PhoneForm>
     );
   }
 }
