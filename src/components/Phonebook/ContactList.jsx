@@ -1,7 +1,6 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { ContactsItems,ContactsLi,ButtonContact} from './ContactList.styled';
-
+import React from 'react';
+import PropTypes from 'prop-types';
+import { ContactsItems, ContactsLi, ButtonContact } from './ContactList.styled';
 
 const ContactList = ({ lists, onClick }) => {
   return (
@@ -21,7 +20,14 @@ const ContactList = ({ lists, onClick }) => {
 };
 
 ContactList.propTypes = {
-  lists: PropTypes.array,
+  lists: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.string.isRequired,
+      name: PropTypes.string.isRequired,
+      number: PropTypes.string.isRequired,
+    })
+  ),
+  onClick: PropTypes.func.isRequired,
 };
 
 export default ContactList;
