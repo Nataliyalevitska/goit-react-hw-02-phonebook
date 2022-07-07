@@ -1,8 +1,8 @@
 import React from 'react';
-
+import PropTypes from 'prop-types';
 import ContactForm from '../ContactForm/ContactForm';
 import Filter from '../Filter/Filter';
-import ContactList from './ContactList';
+import ContactList from '../ContactList/ContactList';
 import '../../styles/index.css';
 import { Title } from '../Phonebook/Phonebook.styled';
 
@@ -21,11 +21,9 @@ class Phonebook extends React.Component {
     }));
   };
   //видалення
-  handleDelete = ev => {
+  handleDelete = id => {
     this.setState(prevState => ({
-      contacts: prevState.contacts.filter(
-        contact => contact.id !== ev.target.id
-      ),
+      contacts: prevState.contacts.filter(contact => contact.id !== id),
     }));
   };
 
@@ -47,10 +45,15 @@ class Phonebook extends React.Component {
         <ContactForm allContacts={contacts} onSubmit={handleCreate} />
         <Title>Contacts</Title>
         <Filter value={filter} onChange={handleFilter} />
-        <ContactList lists={getFilter()} onClick={handleDelete} />
+        <ContactList lists={getFilter()} onDeleteContact={handleDelete} />
       </>
     );
   }
 }
 
 export default Phonebook;
+
+Phonebook.propTypes = {
+  name: PropTypes.string,
+  number: PropTypes.string,
+};
