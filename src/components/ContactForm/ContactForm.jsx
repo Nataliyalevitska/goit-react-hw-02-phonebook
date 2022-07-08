@@ -44,7 +44,7 @@ class ContactForm extends Component {
     });
     return (
       <PhoneForm onSubmit={handleSubmit}>
-        <PhoneLabel>
+        <PhoneLabel htmlFor="name">
           Name
           <PhoneInput
             type="text"
@@ -57,7 +57,7 @@ class ContactForm extends Component {
             required
           />
         </PhoneLabel>
-        <PhoneLabel>
+        <PhoneLabel htmlFor="number">
           Number
           <PhoneInput
             type="tel"
@@ -78,9 +78,9 @@ class ContactForm extends Component {
   }
 }
 
-export default ContactForm;
-
 ContactForm.propTypes = {
   name: PropTypes.string,
   number: PropTypes.string,
 };
+
+export default ContactForm;

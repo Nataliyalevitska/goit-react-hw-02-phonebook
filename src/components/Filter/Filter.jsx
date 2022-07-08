@@ -1,17 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { TitleFilter, InputFilter} from './Filter.styled';
+import React from 'react';
+import PropTypes from 'prop-types';
+import { TitleFilter, InputFilter } from './Filter.styled';
 
 const Filter = ({ onChange, value }) => {
   return (
     <>
-      <TitleFilter>Find contacts by name</TitleFilter>
+      <TitleFilter htmlFor="filter">Find contacts by name</TitleFilter>
       <InputFilter
         type="text"
         name="filter"
         value={value}
         placeholder="*Enter name"
-        onChange={(e) => onChange(e.target.value)}
+        onChange={e => onChange(e.target.value)}
       />
     </>
   );
@@ -19,6 +19,7 @@ const Filter = ({ onChange, value }) => {
 
 Filter.propTypes = {
   value: PropTypes.string,
+  onChange: PropTypes.func,
 };
 
 export default Filter;

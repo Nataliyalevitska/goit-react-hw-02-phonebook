@@ -19,3 +19,9 @@ export const ButtonContact = styled.button`
   margin-bottom: ${p => p.theme.spacing(3)}px;
   font-size: ${p => p.theme.spacing(4)}px;
 `;
+export const ItemWrap = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: 270px;
+  padding: 5px;
+`;

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 
-export const TitleFilter = styled.p`
+export const TitleFilter = styled.label`
   margin-left: ${p => p.theme.spacing(10)}px;
   font-size: ${p => p.theme.spacing(5)}px;
   color: ${p => p.theme.colors.phoneLabColor};
