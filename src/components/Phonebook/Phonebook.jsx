@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+
 import ContactForm from '../ContactForm/ContactForm';
 import Filter from '../Filter/Filter';
 import ContactList from '../ContactList/ContactList';
@@ -52,8 +52,3 @@ class Phonebook extends React.Component {
 }
 
 export default Phonebook;
-
-Phonebook.propTypes = {
-  name: PropTypes.string,
-  number: PropTypes.string,
-};
